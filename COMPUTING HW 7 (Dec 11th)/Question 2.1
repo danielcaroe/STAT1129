@@ -1,0 +1,24 @@
+v <- 0 # initialize v
+m <- 0 # initialize m
+b <- 0 # initialize b
+
+# iterate from 1 to 10
+for(n in 1:10)
+{
+    numxx <- sample.int(3,1) # generate a number from 1 to 10
+    print(numxx)             # print the number
+    if(numxx == 1){          # if number is 1
+        v <- v + 1           # increase v value by 1
+        count1 <- v          # assign v to count1
+    }else if(numxx == 2){    # if number is 2
+        m <- m + 1           # increase m value by 1
+        count2 <- m          # assign m to count2
+    }else{                   # if number is 3
+        b <- b + 1           # increase b value by 1
+        count3 <- b          # assign b value to count3
+    }
+}
+
+cat("\n1 # of times: ", count1) # print count1
+cat("\n2 # of times: ", count2) # print count2
+cat("\n3 # of times: ", count3) # print count3
