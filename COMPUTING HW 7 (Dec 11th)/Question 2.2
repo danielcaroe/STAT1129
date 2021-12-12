@@ -1,0 +1,36 @@
+cnt <- 2 # initialize cnt value
+
+if(cnt == 0){                   # if cnt is 1
+    player_choice <- 1          # assign 1 to player choice
+    cat("You Played: Rock")     # print player played Rock
+}else if(cnt == 5){             # if cnt is 5
+    player_choice <- 2          # assign 2 to player choice
+    cat("You played: Paper")    # print player played Paper
+}else if(cnt == 2){             # if cnt is 2
+    player_choice <- 3          # assign 3 to player choice
+    cat("You Played: Scissors") # print player played scissors
+}else{                          # if cnt is anything else
+    cat("Hand gesture is invalid, please choose(rock, paper, scissors)") # print invalid gesture
+}
+
+player_bot = sample.int(3,1) # generate 1 number between 1 and 3
+
+if(player_bot == 1){         # if number is 1
+    cat("\nThe computer chooses: Rock") # computer chooses rock
+}else if(player_bot == 2){    # if number is 2
+    cat("\nThe computer chooses: Paper") # computer chooses paper
+}else{                        # if number is 2
+    cat("\nThe computer chooses: Scissors") # computer chooses scissors
+}
+
+if(player_choice == player_bot){ # if player_choice and player_bot are same
+    cat("\nIt's a tie! Play again") # print tie
+}else if(player_choice ==1 & player_bot == 3){ # player_choice is 1 and player_bot is 1
+    cat("\nYou win, Play again")    # print player wins
+}else if(player_choice < player_bot){ # if player_choice is less than player_bot
+    cat("\nThe computer wins! Better Luck Next Time!") # print computer wins
+}else if(player_choice == 3 & player_bot == 1){ # if player_choice is 3 and player_bot is 1
+    cat("\nThe computer wins! Better Luck Next Time!") # print computer wins
+}else{   # if player_choice is greater than player bot
+    cat("\nYou win, Play again") # print player wins
+}
